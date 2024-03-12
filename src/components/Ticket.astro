@@ -1,0 +1,67 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
+import MailIcon from "@/icons/Mail.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import DownloadIcon from "@/icons/Download.astro";
+---
+
+<div
+  class="mx-auto sm:my-32 md:my-32 lg:my-32 xl:my-32 lg:w-[900px] md:w-[700px] sm:w-[600px] w-[350px] my-24 h-full animate-blurred-fade-in"
+>
+  <section id="wrapper" class="wrapper">
+    <article id="ticket" class="ticket">
+      <SectionContainer class="relative">
+        <h1
+          class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 mt-4 sm:mt-16 md:mt-16 lg:mt-12"
+        >
+          <span
+            >Hey, I am <span class="text-5xl md:text-7xl lg:text-8xl name"
+              >Francesco</span
+            ></span
+          >
+          <img
+            class="rounded-full lg:size-72 size-52 lg:absolute lg:-top-20 lg:right-[-12px]
+            md:absolute md:top-16 md:right-48 z-[-1] absolute top-10 right-[80px] hidden lg:block"
+            src="/images/ReadyPlayerMe-Avatar.webp"
+            alt="francesco photo"
+          />
+        </h1>
+
+        <h2 class="text-white/90 text-xl lg:text-xl text-wrap max-w-[700px]">
+          <span> +2 years of experience.</span>
+          <span class="text-yellow-200/90">
+            Full Stack Software Developer.</span
+          ><br />
+          <span class="text-white/90 text-lg"
+            >From Italy, living in Málaga, Spain.</span
+          >
+          <span class="text-white/90 text-lg">
+            Creating unique applications.</span
+          >
+        </h2>
+
+        <nav class="flex gap-4 mt-8 flex-wrap">
+          <SocialPill href="https://www.linkedin.com/in/francesco-fava/">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/France167">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:favafrancesco5@gmail.com">
+            <MailIcon class="size-4 md:size-6" />
+            favafrancesco5@gmail.com
+          </SocialPill>
+          <SocialPill href="/documents/Francesco-Resume.pdf" download>
+            <DownloadIcon class="size-4 md:size-6" />
+            Download CV
+          </SocialPill>
+        </nav>
+      </SectionContainer>
+    </article>
+  </section>
+  <div class="bg"></div>
+</div>

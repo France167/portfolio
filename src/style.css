@@ -1,0 +1,106 @@
+ @keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+ 
+.logos-slide{
+    animation: 20s slide infinite linear; 
+    display: inline-flex;
+    width: 250%;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos{
+    overflow: hidden;
+    white-space:  nowrap;
+    position: relative;
+}
+
+.logos:before, .logos:after{
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    content: "";
+    z-index: 10;
+}
+
+.logos:before{
+    left:0;
+    background-image: linear-gradient(to left, rgba(255,255,255,0), rgb(6, 1, 27));
+}
+
+.logos:after{
+    right:0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgb(6, 1, 27));
+}
+
+.logos-slide .img{
+   width: 100%;
+   max-height: 80px;
+   margin: 20px;
+   transition: all 250ms ease-in-out;
+}
+
+.logos-slide .img:hover{
+   transform: scale(1.2);
+   transition: all 250ms ease-in-out;
+
+}
+
+
+ .container{
+    margin: auto;
+    justify-content: center;
+    height: 100vh;
+    width: 900px; 
+    cursor:context-menu;
+
+}
+
+/* .ticket{
+    border: 6px solid #9384be31;
+    box-shadow: 0 0 70px rgba(211, 201, 201, 0.404);
+    max-height: 480px;
+
+    border-radius: 8px;
+    position: relative;
+} */
+
+.ticket {
+    border: 5px solid #5a56648c;
+    box-shadow: 0 0 70px rgba(85, 82, 82, 0.404);
+    max-height: 480px;
+    border-radius: 8px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 6%, rgba(68,34,158,0.19380252100840334) 76%);
+  }
+  
+
+.wrapper {
+    perspective: 1000px;
+  
+}
+
+.bg{
+    top: 0;
+    position:absolute;
+    filter: blur(10px);
+/*     width: 100%; */
+    height: 100%;
+    z-index: -10;
+
+}

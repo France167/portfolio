@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "May 2022 - Actualmente",
+    title: "Full Stack Web Developer - Releevant",
+    description:
+      "Development of web/web3 and blockchain projects. Front-end side created on React, TypeScript, Styled components and MaterialUI. Back-end side created with Node.js, Express and MongoDB. Task manager on Azure Devops and Git for version control. Daily work with Agile Methodology.",
+    link: "https://www.releevant.com/",
+  },
+  {
+    date: "November 2021",
+    title: "Full Stack Web Developer Bootcamb - Releevant",
+    description:
+      "I have completed a comprehensive Full Stack Web Developer Bootcamp, where I acquired proficiency in front-end and back-end development, as well as advanced programming techniques. This intensive training encompassed a broad spectrum of skills, including layout design, foundational programming principles, and advanced front-end development. I am equipped with a solid foundation in both the technical and creative aspects of web development, ready to tackle complex challenges and deliver high-quality solutions.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

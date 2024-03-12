@@ -1,0 +1,144 @@
+---
+import ReactIcon from "@/icons/React.astro";
+import MUIIcon from "@/icons/MaterialUI.astro";
+import HTMLIcon from "@/icons/HTML.astro";
+import BootstrapIcon from "@/icons/Bootstrap.astro";
+import JavaScriptIcon from "@/icons/JavaScript.astro";
+import TypeScriptIcon from "@/icons/TypeScript.astro";
+import RocketIcon from "@/icons/Rocket.astro";
+import SocialPill from "./SocialPill.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-[#23272F] text-[#00D8FF]",
+    icon: ReactIcon,
+  },
+  MUI: {
+    name: "MaterialUI",
+    class: "bg-white text-[#007FFF]",
+    icon: MUIIcon,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#23272F] text-[#EF652A]",
+    icon: HTMLIcon,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-white text-[#7E13F8]",
+    icon: BootstrapIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#23272F] text-[#F0DB4F]",
+    icon: JavaScriptIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-white text-[#3178C6]",
+    icon: TypeScriptIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Releevant Web",
+    description:
+      "A fully responsive website offering seamless course browsing, secure payments with Stripe, and an intuitive admin panel for effortless blog management. Every aspect of this project, from layout to functionality, has been meticulously implemented following the design specifications provided by our designer using Figma. ",
+    link: "https://www.releevant.com/",
+    image: "/projects/releevant.webp",
+    isActive: true,
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.MUI],
+  },
+  {
+    title: "Releevant Landing ",
+    description:
+      "A responsive landing page for an innovative bootcamps company. Explore courses effortlessly, make secure purchases via the integrated payment portal Stripe. Every aspect of this project, from layout to functionality, has been meticulously implemented following the design specifications provided by our designer using Figma.",
+    link: "https://aprenderaprogramardesdecero.com/",
+    image: "/projects/rel-landing.webp",
+    isActive: true,
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.MUI],
+  },
+  {
+    title: "Cocktail DB",
+    description:
+      "Indulge in mixology mastery with  a web platform showcasing an extensive cocktail database. Explore classic and innovative libations, complete with curated ingredients and expert recipes!",
+    link: "https://github.com/France167/Cockatil-DB",
+    image: "/projects/cocktails-db.webp",
+    isActive: false,
+    tags: [TAGS.HTML, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "Recipes DB",
+    description:
+      "Experience culinary exploration at its finest with a platform featuring a diverse array of recipes and ingredients for every cuisine. From Italian classics to exotic delicacies! ",
+    link: "https://famous-buttercream-8c68f6.netlify.app/",
+    image: "/projects/recepes-db.webp",
+    isActive: true,
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT],
+  },
+];
+---
+
+<div
+  class="grid justify-items-center lg:grid-cols-2 md:grid-cols-1 lg:gap-8 grid-cols-1"
+>
+  {
+    PROJECTS.map(({ title, description, tags, image, link, isActive }) => (
+      <>
+        <div class="max-w-md bg-transparent rounded-lg shadow transition hover:scale-[1.02] mb-5 lg:w-[100%]">
+          <img loading="lazy" class="rounded-t-lg" src={image} alt={title} />
+
+          <div class="py-5">
+            <ul class="flex gap-x-4 flex-row">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 items-center rounded-full text-xs ${tag.class} py-2 px-3 mb-4 tag-name`}
+                  >
+                    <tag.icon class="size-5" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <h5 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h5>
+
+            <p class="text-lg mb-4 text-pretty text-white/60">{description}</p>
+            {link && (
+              <div class=" w-48">
+                <SocialPill
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Check it out
+                  <RocketIcon />
+                </SocialPill>
+              </div>
+            )}
+          </div>
+        </div>
+      </>
+    ))
+  }
+</div>
+<h2
+  class="text-white text-2xl lg:text-2xl font-semibold mb-4 flex gap-x-3 items-center mt-10 ml-2"
+>
+  More Projects
+</h2>
+<p class="text-lg ml-2 text-pretty text-white/60">
+  I've had the opportunity to work on several projects that are confidential due
+  to non-disclosure agreements (NDAs). Although I can't share the details or
+  showcase these projects, they've given me invaluable experience and insights
+  across various industries. I'm dedicated to honoring the confidentiality
+  agreements I've signed and excited to apply my expertise to future projects.
+</p>
+
+<style>
+  h5 span {
+    color: rgb(0, 188, 47);
+  }
+</style>
