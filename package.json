@@ -18,6 +18,7 @@
     "@midudev/tailwind-animations": "^0.0.7",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@vercel/speed-insights": "^1.0.10",
     "astro": "^4.4.9",
     "framer-motion": "^11.0.8",
     "tailwindcss": "^3.4.1",
