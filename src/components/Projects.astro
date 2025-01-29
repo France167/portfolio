@@ -1,11 +1,11 @@
 ---
-import ReactIcon from "@/icons/React.astro";
-import MUIIcon from "@/icons/MaterialUI.astro";
-import HTMLIcon from "@/icons/HTML.astro";
 import BootstrapIcon from "@/icons/Bootstrap.astro";
+import HTMLIcon from "@/icons/HTML.astro";
 import JavaScriptIcon from "@/icons/JavaScript.astro";
-import TypeScriptIcon from "@/icons/TypeScript.astro";
+import MUIIcon from "@/icons/MaterialUI.astro";
+import ReactIcon from "@/icons/React.astro";
 import RocketIcon from "@/icons/Rocket.astro";
+import TypeScriptIcon from "@/icons/TypeScript.astro";
 import SocialPill from "./SocialPill.astro";
 
 const TAGS = {
@@ -68,15 +68,6 @@ const PROJECTS = [
     isActive: false,
     tags: [TAGS.HTML, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
-  {
-    title: "Recipes DB",
-    description:
-      "Experience culinary exploration at its finest with a platform featuring a diverse array of recipes and ingredients for every cuisine. From Italian classics to exotic delicacies! ",
-    link: "https://famous-buttercream-8c68f6.netlify.app/",
-    image: "/projects/recepes-db.webp",
-    isActive: true,
-    tags: [TAGS.REACT, TAGS.JAVASCRIPT],
-  },
 ];
 ---
 
@@ -86,7 +77,7 @@ const PROJECTS = [
   {
     PROJECTS.map(({ title, description, tags, image, link, isActive }) => (
       <>
-        <div class="max-w-md bg-transparent rounded-lg shadow transition hover:scale-[1.02] mb-5 lg:w-[100%]">
+        <div class="max-w-md bg-transparent rounded-lg shadow transition  mb-5 lg:w-[100%]">
           <img loading="lazy" class="rounded-t-lg" src={image} alt={title} />
 
           <div class="py-5">
