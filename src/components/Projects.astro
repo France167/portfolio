@@ -5,6 +5,7 @@ import JavaScriptIcon from "@/icons/JavaScript.astro";
 import MUIIcon from "@/icons/MaterialUI.astro";
 import ReactIcon from "@/icons/React.astro";
 import RocketIcon from "@/icons/Rocket.astro";
+import SvelteIcon from "@/icons/Svelte.astro";
 import TypeScriptIcon from "@/icons/TypeScript.astro";
 import SocialPill from "./SocialPill.astro";
 
@@ -39,13 +40,17 @@ const TAGS = {
     class: "bg-white text-[#3178C6]",
     icon: TypeScriptIcon,
   },
+  SVELTE: {
+    name: "SvelteKit",
+    class: "bg-white text-[#FF3E00]",
+    icon: SvelteIcon,
+  },
 };
 const PROJECTS = [
   {
     title: "Releevant Web",
     description:
       "A fully responsive website offering seamless course browsing, secure payments with Stripe, and an intuitive admin panel for effortless blog management. Every aspect of this project, from layout to functionality, has been meticulously implemented following the design specifications provided by our designer using Figma. ",
-    link: "https://www.releevant.com/",
     image: "/projects/releevant.webp",
     isActive: true,
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.MUI],
@@ -54,19 +59,18 @@ const PROJECTS = [
     title: "Releevant Landing",
     description:
       "A responsive landing page for an innovative bootcamps company. Explore courses effortlessly, make secure purchases via the integrated payment portal Stripe. Every aspect of this project, from layout to functionality, has been meticulously implemented following the design specifications provided by our designer using Figma.",
-    link: "https://aprenderaprogramardesdecero.com/",
     image: "/projects/rel-landing.webp",
     isActive: true,
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.MUI],
   },
   {
-    title: "Cocktail DB",
+    title: "Tuftopia",
     description:
-      "Indulge in mixology mastery with  a web platform showcasing an extensive cocktail database. Explore classic and innovative libations, complete with curated ingredients and expert recipes!",
-    link: "https://github.com/France167/Cockatil-DB",
-    image: "/projects/cocktails-db.webp",
-    isActive: false,
-    tags: [TAGS.HTML, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+      "A bilingual (ES/EN) website for a handmade custom tufting rug studio in Málaga. Showcases the portfolio of finished rugs, explains the ordering process and pricing, and lets customers submit custom orders straight from the site with email delivery handled by Resend.",
+    link: "https://tuftopia.vercel.app/",
+    image: "/projects/tuftopia.webp",
+    isActive: true,
+    tags: [TAGS.SVELTE, TAGS.TYPESCRIPT],
   },
 ];
 ---
